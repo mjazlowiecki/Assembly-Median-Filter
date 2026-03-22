@@ -4,6 +4,8 @@ Project realized as part of the Assembly Languages course at the Silesian Univer
 
 The application demonstrates the implementation of a non-linear median filter for grayscale images, used for noise reduction (e.g., "salt and pepper" noise). The project puts a strong emphasis on performance optimization, comparing code written in C++ with highly optimized x64 Assembly code.
 
+<img width="1364" height="921" alt="example" src="https://github.com/user-attachments/assets/259e076d-79df-4d35-b91d-615a7e85ba65" />
+
 ## Project Architecture
 The project was developed using a hybrid architecture in Visual Studio 2022:
 * **User Interface (UI):** C# (Windows Forms) - manages image loading, processing parameters, and displaying results.
