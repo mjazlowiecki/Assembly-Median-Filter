@@ -70,7 +70,7 @@ namespace MedianFilterApp
             // Pobieranie rozmiaru filtra z ComboBoxa
             int filterSize = 3; // Domyślna wartość
 
-            // ZABEZPIECZENIE: Sprawdzamy czy ComboBox istnieje i ma wybraną wartość
+            // czy ComboBox istnieje i ma wybraną wartość
             if (cbFilterSize != null && cbFilterSize.SelectedItem != null)
             {
                 // Format np. "5x5" -> bierzemy pierwszy znak "5"
@@ -103,7 +103,6 @@ namespace MedianFilterApp
                     Application.DoEvents();
 
                     watch.Start();
-                    // ignoruje
                     MedianFilterAsm(bmpData.Scan0, bmp.Width, bmp.Height, bmpData.Stride, tbThreads.Value, filterSize);
                     watch.Stop();
 
@@ -169,8 +168,6 @@ namespace MedianFilterApp
             // Panel: Wyniki
             gbOutput = new GroupBox { Text = "4. Wyniki", Location = new Point(20, 560), Size = new Size(1020, 160) };
             lblStatus = new Label { Text = "Oczekiwanie na obraz...", Location = new Point(20, 30), Size = new Size(980, 25), BackColor = Color.White, BorderStyle = BorderStyle.FixedSingle, TextAlign = ContentAlignment.MiddleLeft };
-
-            // Czcionki 
             lblExecutionTimeCpp = new Label { Text = "Czas C++: -- ms", Location = new Point(20, 70), AutoSize = true, Font = new Font(this.Font.FontFamily, 12.0f, FontStyle.Regular) };
             lblExecutionTimeAsm = new Label { Text = "Czas ASM: -- ms", Location = new Point(540, 70), AutoSize = true, Font = new Font(this.Font.FontFamily, 12.0f, FontStyle.Bold) };
 

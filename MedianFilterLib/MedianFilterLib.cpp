@@ -119,7 +119,6 @@ extern "C" {
 
             if (start < end)
             {
-\
                 threadsVector.emplace_back(ProcessChunkAsm, imgData, imgCopy.data(), width, height, stride, safeStride, start, end);
             }
             currentY = end;
